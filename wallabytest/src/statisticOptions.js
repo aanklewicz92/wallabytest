@@ -1,10 +1,15 @@
 ﻿(function (module) {
-    var statisticOptionsController = function ($timeout, $scope) {
+    var statisticOptionsController = function ($timeout, $scope, $log) {
         var vm = this, timer;
         vm.dataField = $scope.options;
         vm.showAlert = false;
         if (!vm.dataField.statisticsOptions) {
             vm.dataField.statisticsOptions = 'none';
+        }
+
+        vm.onButtonClick = function () {
+            vm.showAlert = true;
+            $log.log('Clicked');
         }
 
         vm.restart = function () {
@@ -46,7 +51,7 @@
                 saveCallback: '&',
                 readonly: '=',
             },
-            controller: ['$timeout', '$scope', statisticOptionsController],
+            controller: ['$timeout', '$scope', '$log', statisticOptionsController],
             controllerAs: 'vm',
         };
     }

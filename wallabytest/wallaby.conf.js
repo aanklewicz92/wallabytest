@@ -2,12 +2,14 @@
 module.exports = function () {
     return {
         files: [
-            "src/jquery-1.10.2.min.js",
-            "src/angular.js",
-            "src/angular-mocks.js",
+            { pattern: "src/jquery-1.10.2.min.js", instrument: false },
+            { pattern: "src/angular.js", instrument: false },
+            { pattern: "src/angular-mocks.js", instrument: false },
             "src/app.js",
             "src/procedures.js",
-            "src/statisticOptions.js"
+            "src/statisticOptions.js",
+            "src/noTemplateUrl.js",
+            "src/statisticOptionsTemplate.html"
         ],
         tests: [
             "tests/**/*.tests.js"

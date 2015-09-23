@@ -69,12 +69,14 @@
     <Content Include="src\angular.js" />
     <Content Include="src\app.js" />
     <Content Include="src\jquery-1.10.2.min.js" />
+    <Content Include="src\noTemplateUrl.js" />
     <Content Include="src\procedures.js" />
     <Content Include="src\statisticOptions.js" />
     <Content Include="src\statisticOptionsTemplate.html" />
     <Content Include="tests\css\jasmine.css" />
     <Content Include="tests\scripts\jasmine-html.js" />
     <Content Include="tests\scripts\jasmine.js" />
+    <Content Include="tests\tests\noTemplateUrl.tests.js" />
     <Content Include="tests\tests\passing.tests.js" />
     <Content Include="tests\tests\statisticOptions.tests.js" />
     <Content Include="wallaby.conf.js" />
