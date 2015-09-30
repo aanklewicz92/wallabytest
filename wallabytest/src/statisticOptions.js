@@ -3,9 +3,7 @@
         var vm = this, timer;
         vm.dataField = $scope.options;
         vm.showAlert = false;
-        if (!vm.dataField.statisticsOptions) {
-            vm.dataField.statisticsOptions = 'none';
-        }
+        vm.functionTest = false;
 
         vm.onButtonClick = function () {
             vm.showAlert = true;
@@ -13,6 +11,7 @@
         }
 
         vm.restart = function () {
+            vm.functionTest = true;
             if (!vm.showAlert) {
                 vm.showAlert = true;
                 showAlertRestartButton();
@@ -24,7 +23,6 @@
                 $timeout.cancel(timer);
                 vm.showAlert = false;
                 showDefaultRestartButton();
-                vm.dataField.statisticsKey = null;
                 $scope.saveCallback();
             }
         }
@@ -44,7 +42,7 @@
 
     var pxStatisticOptions = function () {
         return {
-            templateUrl: '/src/statisticOptionsTemplate.html',
+            templateUrl: 'statisticOptionsTemplate.html',
             restrict: 'E',
             scope: {
                 options: '=',

@@ -1,4 +1,4 @@
-﻿describe('DeleteWithConfirmation directive', function () {
+﻿describe('NoTemplateUrl directive', function () {
     var $compile, $rootScope, element, $log;
 
     beforeEach(module('myproject.procedures'));
@@ -19,13 +19,5 @@
 
     it('starts with false', function () {
         expect(element.isolateScope().vm.showAlert).toBe(false);
-    });
-
-    it('switches on click', function () {
-        var a = element;
-        a.click();
-
-        expect(a.isolateScope().vm.showAlert).toBe(true);
-        expect($log.log).toHaveBeenCalled();
     });
 })

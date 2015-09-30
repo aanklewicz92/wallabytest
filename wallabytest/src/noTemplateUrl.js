@@ -4,7 +4,7 @@
         vm.showAlert = false;
         vm.onButtonClick = function () {
             vm.showAlert = true;
-            $log.log('Clicked test');
+            $log.log('Clicked');
         }
     };
 
